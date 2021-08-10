@@ -1,0 +1,84 @@
+html,body{
+    margin: 0;
+}
+body {
+    padding: 0 10px 10px 10px;
+    background: rgb(50,50,50);
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+body > h1 {
+    color: red;
+    font-size: 3em;
+    margin: 0.25em 0;
+    font-weight: normal;
+}
+#canvas {
+    background: black;
+    border: 1px solid white;
+    border-radius: 0.25em;
+    width: 720px;
+    height: 480px;
+    width: calc(100vw - 20px);
+    /* 16:9 width:height ratio -> 9/16 = .5625  */
+    /* 9/16 * 20px padding = 11.25px */
+    height: calc(56.25vw - 11.25px);
+
+}
+
+#container {
+    position: relative;
+}
+#btnStart {
+    font-size: 2em;
+
+    position: absolute;
+    top: calc(50% - 1em);
+    left: calc(50% - 5em);
+
+    width: 10em;
+    height: 2em;
+
+
+    background: red;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.25em;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* #region overlay info */
+.overlay-info {
+    position: absolute;
+    color: white;
+}
+#score {
+    top: 1em;
+    left: 1em;
+}
+#score::before {
+    content: "Score: ";
+}
+#health {
+    top: 1em;
+    right: 1em;
+}
+#health::before {
+    content: "Health: ";
+}
+/* #endregion */
+
+#lossPopup {
+    position: absolute;
+    background: white;
+    padding: 1em;
+    width: 10em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: calc(50% - 1em);
+    left: calc(50% - 5em);
+}
